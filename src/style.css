@@ -1,6 +1,20 @@
+@font-face {
+    font-family: 'ArchivoNArrow-Bold';
+    src: url(/fonts/ArchivoNarrow-Bold.ttf);
+}
+@font-face {
+    font-family: 'ArchivoNArrow-Medium';
+    src: url(/fonts/ArchivoNarrow-Medium.ttf);
+}
+@font-face {
+    font-family: 'ArchivoNArrow-Regular';
+    src: url(/fonts/ArchivoNarrow-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
+    overscroll-behavior: none;
 }
 
 #loaderFrame{
@@ -12,19 +26,22 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: #E9EBE8;
+    background-color: #F5F5F5;;
 }
 #loaderMask{
     overflow: hidden;
 }
 .loaderNum{
+
     font-size: 200px;
-    color: #3C5E1F;
+    font-family: 'ArchivoNArrow-Bold';
+    color: #0c0c0c;;
     transition: transform 900ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 #container {
     position: absolute;
-    background-color: #FCFCFC;
+
+    background-color: #0c0c0c;
     top: 0;
     left: 0;
     will-change: transform;
@@ -40,18 +57,22 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
 }
 #perc {
     position: fixed;
     opacity: 0;
     bottom: 10%;
     right: 1%;
-    font-size: 50px;
+    font-size: 30px;
     z-index: 9999;
     transition: opacity 1000ms;
+    font-family: 'ArchivoNArrow-Bold';
+    color: #F5F5F5;
 }
 .project_title {
-
+    font-family: 'ArchivoNArrow-Bold';
+    color: #F5F5F5;
     margin-top: 51px;
     margin-bottom: 100px;
     text-align: center;

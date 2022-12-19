@@ -1,7 +1,7 @@
 function addImage(){
 
     const container = document.querySelector('#container')
-    const imgLength = 14
+    const imgLength = 22
     for (let i = 0; i < imgLength; i++) {
         let div = document.createElement('div');
         let sourceImg = `/images/${i}.jpeg`
@@ -9,8 +9,8 @@ function addImage(){
         div.classList.add('imgFrame')
         div.style.transition = 'opacity 1000ms'
         div.style.opacity = 0
-        div.style.width = 1570 + 'px'
-        div.style.height = 1048 + 'px'
+        div.style.width = 81.771 + 'vw'
+        div.style.height = 97.037 + 'vh'
         div.style.marginBottom = 166 + 'px'
         div.style.backgroundImage = `url(${sourceImg})`
         
