@@ -5,7 +5,19 @@
     padding: 0;
     overscroll-behavior: none;
 }
-
+.alert_mobile {
+    background-color: #e32b2b;
+    position: fixed;
+    top: 0;
+    left:  0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Archivo Narrow';
+    z-index: 9999;
+}
 #loaderFrame{
     position: absolute;
     top: 0;
@@ -29,7 +41,6 @@
 }
 #container {
     position: absolute;
-
     background-color: #0c0c0c;
     top: 0;
     left: 0;

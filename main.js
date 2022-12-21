@@ -1,6 +1,43 @@
 window.onbeforeunload = () => {
     window.scrollTo(0, 0)
 }
+
+function rotateAlert() {
+    const rotateAlert = document.querySelector('.alert_mobile')
+
+    let winHeight = window.innerHeight
+    let winWidth = window.innerWidth
+    let aspectRatio = winWidth / winHeight
+
+    if (aspectRatio <= 0.8) {
+        rotateAlert.style.display ='flex'
+    }
+    if (aspectRatio >= 1 ) {
+        rotateAlert.style.display ='none'
+    }
+
+    window.onresize = () => {
+
+        let winHeight = window.innerHeight
+        let winWidth = window.innerWidth
+        let aspectRatio = winWidth / winHeight
+        let onMobile = true
+
+        if (aspectRatio < 0.8) {
+            onMobile = true
+            rotateAlert.style.display ='flex'
+        }
+        if (aspectRatio > 1 ) {
+            onMobile = false
+            rotateAlert.style.display ='none'
+        }
+        if(!onMobile) {
+            window.location.reload()
+            window.scrollTo(0, 0)
+        }
+    }
+}
+rotateAlert()
 function main(){  
     function addImage(){
 
