@@ -1,15 +1,4 @@
-@font-face {
-    font-family: 'ArchivoNArrow-Bold';
-    src: url(/fonts/ArchivoNarrow-Bold.ttf);
-}
-@font-face {
-    font-family: 'ArchivoNArrow-Medium';
-    src: url(/fonts/ArchivoNarrow-Medium.ttf);
-}
-@font-face {
-    font-family: 'ArchivoNArrow-Regular';
-    src: url(/fonts/ArchivoNarrow-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&display=swap');
 
 * {
     margin: 0;
@@ -34,7 +23,7 @@
 .loaderNum{
 
     font-size: 200px;
-    font-family: 'ArchivoNArrow-Bold';
+    font-family: 'Archivo Narrow';
     color: #0c0c0c;;
     transition: transform 900ms cubic-bezier(0.42, 0, 0.58, 1);
 }
@@ -64,14 +53,14 @@
     opacity: 0;
     bottom: 10%;
     right: 1%;
-    font-size: 30px;
+    font-size: 25px;
     z-index: 9999;
     transition: opacity 1000ms;
-    font-family: 'ArchivoNArrow-Bold';
+    font-family: 'Archivo Narrow';
     color: #F5F5F5;
 }
 .project_title {
-    font-family: 'ArchivoNArrow-Bold';
+    font-family: 'Archivo Narrow';
     color: #F5F5F5;
     margin-top: 51px;
     margin-bottom: 100px;
