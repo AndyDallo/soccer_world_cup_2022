@@ -1,44 +1,40 @@
-window.onbeforeunload = () => {
-    window.scrollTo(0, 0)
-}
 
-function rotateAlert() {
-    const rotateAlert = document.querySelector('.alert_mobile')
+function main(){  
 
-    let winHeight = window.innerHeight
-    let winWidth = window.innerWidth
-    let aspectRatio = winWidth / winHeight
-
-    if (aspectRatio <= 0.8) {
-        rotateAlert.style.display ='flex'
-    }
-    if (aspectRatio >= 1 ) {
-        rotateAlert.style.display ='none'
+    window.onbeforeunload = () => {
+        window.scrollTo(0, 0)
     }
 
-    window.onresize = () => {
-
+    function rotateAlert() {
+        const rotateAlert = document.querySelector('.alert_mobile')
+    
         let winHeight = window.innerHeight
         let winWidth = window.innerWidth
         let aspectRatio = winWidth / winHeight
-        let onMobile = true
-
-        if (aspectRatio < 0.8) {
-            onMobile = true
+        
+        if (aspectRatio < 0.9 ) {
             rotateAlert.style.display ='flex'
-        }
-        if (aspectRatio > 1 ) {
-            onMobile = false
-            rotateAlert.style.display ='none'
-        }
-        if(!onMobile) {
-            window.location.reload()
-            window.scrollTo(0, 0)
-        }
+         }
+         else {
+             rotateAlert.style.display ='none'
+         }
+        
+        window.onresize = () => {
+    
+            let winHeight = window.innerHeight
+            let winWidth = window.innerWidth
+            let aspectRatio = winWidth / winHeight
+            
+            if (aspectRatio < 0.9 ) {
+               rotateAlert.style.display ='flex'
+            }
+            else {
+                rotateAlert.style.display ='none'
+            }
+        } 
     }
-}
-rotateAlert()
-function main(){  
+    rotateAlert()
+
     function addImage(){
 
         const container = document.querySelector('#container')
